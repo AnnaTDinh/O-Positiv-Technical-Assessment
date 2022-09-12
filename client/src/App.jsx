@@ -6,7 +6,19 @@ import PurchaseType from './components/purchase-type/Purchase-type.jsx';
 import Quantity from './components/quantity/Quantity.jsx';
 
 function App() {
-  return <section className="app"></section>;
+  return (
+    <section className="app">
+      <section>
+        <Option />
+        <PurchaseType />
+        <Quantity />
+        <FrequentlyBought />
+      </section>
+      <section>
+        <AddCart />
+      </section>
+    </section>
+  );
 }
 
 export default App;
