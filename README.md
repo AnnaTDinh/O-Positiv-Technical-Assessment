@@ -13,11 +13,11 @@ Hi there, my name is Anna Dinh. I hope you enjoy reading my code! :)
 2. After you've cloned the repo, ensure your current directory is /O-Positive-Technical-Assessment
 3. After you're in the correct directory, run these commands in the following order:
 
-```
-cd /client
-npm i
-npm start
-```
+   ```
+   cd /client
+   npm i
+   npm start
+   ```
 
 ## **Here's a side by side comparison**
 
