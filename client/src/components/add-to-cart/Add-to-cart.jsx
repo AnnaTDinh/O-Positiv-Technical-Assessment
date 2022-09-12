@@ -1,6 +1,11 @@
 import './Add-to-cart.scss';
 
-function AddCart({ oneTimePrice, subscriptionPrice, purchaseType }) {
+function AddCart({
+  oneTimePrice,
+  subscriptionPrice,
+  purchaseType,
+  handleAddToCart,
+}) {
   const handleDisplay = () => {
     if (purchaseType === 'subscribe & save') {
       return (
@@ -10,7 +15,9 @@ function AddCart({ oneTimePrice, subscriptionPrice, purchaseType }) {
         </button>
       );
     } else {
-      return <button>Add to Cart - {oneTimePrice}</button>;
+      return (
+        <button onClick={handleAddToCart}>Add to Cart - {oneTimePrice}</button>
+      );
     }
   };
 
