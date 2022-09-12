@@ -7,7 +7,7 @@ function AddCart({
   handleAddToCart,
 }) {
   const handleDisplay = () => {
-    if (purchaseType === 'subscribe & save') {
+    if (purchaseType === 'Subscription') {
       return (
         <button>
           Add to Cart - <span className="light">{oneTimePrice}</span>
