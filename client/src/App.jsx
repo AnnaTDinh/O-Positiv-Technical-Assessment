@@ -4,7 +4,7 @@ import FrequentlyBought from './components/frequently-bought/Frequently-bought.j
 import Option from './components/option/Option.jsx';
 import PurchaseType from './components/purchase-type/Purchase-type.jsx';
 import Quantity from './components/quantity/Quantity.jsx';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 function App() {
   const options = {
@@ -26,8 +26,8 @@ function App() {
     },
   };
 
-  const [option, setOption] = useState('gummies');
-  const [purchaseType, setPurchaseType] = useState('subscribe & save');
+  const [option, setOption] = useState('FLO - PMS Gummy Vitamins');
+  const [purchaseType, setPurchaseType] = useState('Subscription');
   const [quantity, setQuantity] = useState(1);
   const [frequentlyBoughtWith, setFrequentlyBoughtWith] = useState(false);
   const [oneTimePrice, setOneTimePrice] = useState('$31.99');
@@ -35,6 +35,7 @@ function App() {
   const [description, setDescription] = useState(
     '1 bottle ships every 1 month'
   );
+  const carts = useRef([]);
 
   const handleQtyChange = (num) => {
     setQuantity(num);
@@ -43,7 +44,61 @@ function App() {
     setDescription(options[num].description);
   };
 
-  const handleAddToCart = () => {};
+  const handleAddToCart = () => {
+    if (frequentlyBoughtWith) {
+      let fItem = {
+        itemName: 'DISCO Multivitamin',
+        type: 'One Time',
+        count: 1,
+      };
+      if (
+        carts.current.findIndex(
+          (cartItem) => cartItem.itemName === 'DISCO Multivitamin'
+        ) === -1
+      ) {
+        carts.current = [...carts.current, fItem];
+      } else {
+        carts.current = carts.current.map((cartItem) => {
+          if (cartItem.itemName === 'DISCO Multivitamin') {
+            return { ...cartItem, count: fItem.count + 1 };
+          } else {
+            return cartItem;
+          }
+        });
+      }
+    }
+
+    let item = {
+      itemName: option,
+      type: purchaseType,
+      count: quantity,
+    };
+
+    if (
+      carts.current.findIndex(
+        (cartItem) =>
+          cartItem.itemName === item.itemName && cartItem.type === item.type
+      ) === -1
+    ) {
+      carts.current = [...carts.current, item];
+    } else {
+      carts.current = carts.current.map((cartItem) => {
+        if (
+          cartItem.itemName === item.itemName &&
+          cartItem.type === item.type
+        ) {
+          return { ...cartItem, count: cartItem.count + item.count };
+        } else {
+          return cartItem;
+        }
+      });
+    }
+    alert(
+      carts.current
+        .map((cartItem) => Object.values(cartItem).join(' | '))
+        .join('\n')
+    );
+  };
 
   return (
     <section className="app">
@@ -70,6 +125,7 @@ function App() {
         oneTimePrice={oneTimePrice}
         subscriptionPrice={subscriptionPrice}
         purchaseType={purchaseType}
+        handleAddToCart={handleAddToCart}
       />
     </section>
   );
