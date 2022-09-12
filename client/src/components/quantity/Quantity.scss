@@ -1,0 +1,44 @@
+.quantity-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid #fce9ed;
+
+  .quantity-title-container {
+    display: flex;
+    justify-content: space-between;
+    .buttons {
+      display: flex;
+      width: 60%;
+      justify-content: flex-end;
+      padding-right: 8px;
+    }
+  }
+  input {
+    visibility: hidden;
+    margin: 0 8px 0 0;
+    width: auto;
+  }
+  input:checked + label {
+    background-color: #f37490;
+    border-color: #fabdcc;
+    color: white;
+  }
+  label {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    border: 1px solid #f37490;
+    color: #f37490;
+    border-radius: 11.5px;
+    cursor: pointer;
+    font-size: 14px;
+    left: 0;
+    width: 33px;
+    margin-bottom: 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 25px;
+  }
+}
