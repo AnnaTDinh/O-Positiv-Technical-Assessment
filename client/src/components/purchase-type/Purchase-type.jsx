@@ -14,8 +14,8 @@ function PurchaseType({
           <section>
             <input
               type="radio"
-              value="subscribe & save"
-              checked={purchaseType === 'subscribe & save'}
+              value="Subscription"
+              checked={purchaseType === 'Subscription'}
               name="purchaseType"
               onChange={(e) => setPurchaseType(e.target.value)}
             />{' '}
@@ -34,8 +34,8 @@ function PurchaseType({
           <section>
             <input
               type="radio"
-              value="one time"
-              checked={purchaseType === 'one time'}
+              value="One Time"
+              checked={purchaseType === 'One Time'}
               name="purchaseType"
               onChange={(e) => setPurchaseType(e.target.value)}
             />{' '}
