@@ -1,7 +1,7 @@
 import './Frequently-bought.scss';
 
-function Frequent() {
+function FrequentlyBought() {
   return <section className="frequent">Frequently Bought With</section>;
 }
 
-export default Frequent;
+export default FrequentlyBought;
