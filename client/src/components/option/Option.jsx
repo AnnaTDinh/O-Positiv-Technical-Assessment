@@ -4,7 +4,7 @@ function Option({ option, setOption }) {
   return (
     <section className="option-container">
       <section className="title">1. Select Option:</section>
-      <section className="options" onChange={(e) => setOption(e.target.value)}>
+      <section className="options">
         <section className="options-choice">
           <section className="bold">
             <input
@@ -12,6 +12,7 @@ function Option({ option, setOption }) {
               value="gummies"
               name="option"
               checked={option === 'gummies'}
+              onChange={(e) => setOption(e.target.value)}
             />{' '}
             Gummies
           </section>
@@ -25,6 +26,7 @@ function Option({ option, setOption }) {
               value="capsule"
               checked={option === 'capsule'}
               name="option"
+              onChange={(e) => setOption(e.target.value)}
             />{' '}
             Capsule
           </section>
