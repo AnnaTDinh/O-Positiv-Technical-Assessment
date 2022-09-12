@@ -1,0 +1,25 @@
+.purchase-type-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid #fce9ed;
+  .purchase-type {
+    display: flex;
+    justify-content: space-between;
+    .purchase-type-option {
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 10px;
+    }
+    .end {
+      text-align: end;
+    }
+    .red {
+      font-family: 'Apercu-Bold';
+      font-size: 16px;
+      line-height: 1.2;
+      color: #ff5764;
+    }
+  }
+}
