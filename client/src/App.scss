@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Apercu-Regular';
+  src: url('./fonts/FontsFree-Net-ApercuRegular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Apercu-Bold';
+  src: url('./fonts/FontsFree-Net-ApercuBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Apercu-Light';
+  src: url('./fonts/FontsFree-Net-ApercuLight.ttf') format('truetype');
+}
+
+.app {
+  width: 1015px;
+  .app-selection {
+    background-color: white;
+    border: solid 1px hsl(347, 76%, 95%);
+    border-radius: 12px;
+    margin: 12px;
+    width: 47%;
+  }
+  p {
+    font-family: 'Apercu-Light';
+    font-size: 15px;
+    color: rgb(131, 129, 129);
+    padding-left: 30px;
+    font-weight: 200;
+    line-height: 1.1;
+    padding-top: 3px;
+    padding-left: 30px;
+    margin: 0;
+    font-weight: 200;
+  }
+  .title {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    color: 555;
+    font-family: 'Apercu-Regular';
+  }
+  .bold {
+    font-family: 'Apercu-Bold';
+    font-size: 21px;
+    color: #000;
+  }
+}
