@@ -10,13 +10,13 @@ function AddCart({
     if (purchaseType === 'Subscription') {
       return (
         <button>
-          Add to Cart - <span className="light">{oneTimePrice}</span>
+          ADD TO CART - <span className="light">{oneTimePrice}</span>
           {subscriptionPrice}
         </button>
       );
     } else {
       return (
-        <button onClick={handleAddToCart}>Add to Cart - {oneTimePrice}</button>
+        <button onClick={handleAddToCart}>ADD TO CART - {oneTimePrice}</button>
       );
     }
   };
