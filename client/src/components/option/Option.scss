@@ -1,0 +1,22 @@
+.option-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid #fce9ed;
+
+  .options {
+    display: flex;
+
+    .options-choice {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      &:nth-child(2) {
+        border-left: 1px solid #fce9ed;
+        padding-left: 16px;
+      }
+    }
+  }
+}
