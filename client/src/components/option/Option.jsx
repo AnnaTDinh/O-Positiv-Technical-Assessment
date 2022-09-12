@@ -9,9 +9,9 @@ function Option({ option, setOption }) {
           <section className="bold">
             <input
               type="radio"
-              value="gummies"
+              value="FLO - PMS Gummy Vitamins"
               name="option"
-              checked={option === 'gummies'}
+              checked={option === 'FLO - PMS Gummy Vitamins'}
               onChange={(e) => setOption(e.target.value)}
             />{' '}
             Gummies
@@ -23,8 +23,8 @@ function Option({ option, setOption }) {
           <section className="bold">
             <input
               type="radio"
-              value="capsule"
-              checked={option === 'capsule'}
+              value="FLO - PMS Vitamin Capsule"
+              checked={option === 'FLO - PMS Vitamin Capsule'}
               name="option"
               onChange={(e) => setOption(e.target.value)}
             />{' '}
