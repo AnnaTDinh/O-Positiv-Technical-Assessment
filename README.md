@@ -21,6 +21,6 @@ npm start
 
 ## **Here's a side by side comparison**
 
-![Website O Positive](https://github.com/AnnaTDinh/O-Positiv-Technical-Assessment/blob/master/Screen%20Shot%202022-09-11%20at%209.00.32%20PM.png)
-
-![Website O Positive Clone](https://github.com/AnnaTDinh/O-Positiv-Technical-Assessment/blob/master/my-version.png)
+| O Positive Website                                                                                                                                | My Version                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| ![Website O Positive](https://github.com/AnnaTDinh/O-Positiv-Technical-Assessment/blob/master/Screen%20Shot%202022-09-11%20at%209.00.32%20PM.png) | ![Website O Positive Clone](https://github.com/AnnaTDinh/O-Positiv-Technical-Assessment/blob/master/my-version.png) |
